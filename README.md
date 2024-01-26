@@ -1,1 +1,3 @@
-# stock_prediction_LSTM-dynamic-residual_and_BP
+# 基于动态残差学习的堆叠式LSTM模型和传统BP在股票预测中的应用
+
+README
