@@ -1,4 +1,5 @@
-﻿# 写在前面
+﻿[![Colab NoteBook Link](https://img.shields.io/badge/Colab%20NoteBook%20Link-%40hiddenSharp429-yellow)](https://colab.research.google.com/github/hiddenSharp429/Application-of-stacked-LSTM-model-and-BP-based-on-dynamic-residual-learning-in-stock-prediction/blob/main/LSTM_better.ipynb) [![Colab NoteBook Link](https://img.shields.io/badge/Baidu%20Cloud%20Disk-%40hiddenSharp429-white)](https://pan.baidu.com/s/1ZyAadZnng24O27obdNFTLg?pwd=gv6j)
+# 写在前面
 
 若自己的环境运行不了，推荐使用打包好的环境`stock_price_prediction`，解压缩后放到Anaconda3和env下，在vscode或者pycharm中选择改虚拟环境后运行
 
@@ -9,9 +10,9 @@
 # 1. 前言
 
 本论文探讨了长短时记忆网络（LSTM）和反向传播神经网络（BP）在股票价格预测中的应用。首先，我们介绍了LSTM和BP在时间序列预测中的基本原理和应用背景。通过对比分析两者的优缺点，我们选择了LSTM作为基础模型，因其能够有效处理时间序列数据中的长期依赖关系，在基础LSTM模型的基础上，我们引入了动态残差学习（dynamic skip connection）的概念，通过动态调整残差连接，提高了模型的长期记忆能力和预测准确性。实验证明，动态残差的引入在股票价格预测任务中取得了显著的改进效果。进一步地，我们探讨了堆叠式LSTM的改进方法，通过增加模型的深度来捕捉更复杂的时间序列模式。我们详细阐述了堆叠式LSTM的结构和训练过程，并通过实验证实其在股票价格预测中的优越性。结果表明，堆叠式LSTM在处理多层次的时间序列信息上具有更强的表达能力，提高了模型的泛化性能。综合而言，本论文通过对LSTM和BP在股票价格预测中的应用进行研究，进一步引入了动态残差学习和堆叠式LSTM的改进方法，提高了模型的性能和稳健性。这些方法为金融领域的时间序列预测提供了有效的工具和思路，对于投资决策和风险管理具有重要的实际意义。
- ![Value](https://img-blog.csdnimg.cn/direct/4ca65cdac9ea45d0a378552afb7c8b5b.png =120x120)  | ![在这里插入图片描述](https://img-blog.csdnimg.cn/direct/b8bb336c2c114b9e9fa635c084f224cf.png =120x60)|
-| :----------------------------------------------------------: | :----------------------------------------------------------: |
-| [Colab Notebook](https://colab.research.google.com/github/hiddenSharp429/Application-of-stacked-LSTM-model-and-BP-based-on-dynamic-residual-learning-in-stock-prediction/blob/main/LSTM_better.ipynb) | [Github Rep](https://github.com/hiddenSharp429/Application-of-stacked-LSTM-model-and-BP-based-on-dynamic-residual-learning-in-stock-prediction) |
+
+
+---
 # 2. 数据集和方法选用
 随着信息技术的不断发展和大数据的涌现，研究者们越来越倾向于利用高频、多维的金融数据来提升预测模型的性能。在这一趋势中，长短时记忆网络（LSTM）作为一种强大的时序建模工具，凭借其对长期依赖关系的出色捕捉能力，引起了广泛的关注。同时，动态残差学习和堆叠式LSTM等改进方法的引入进一步提高了模型的复杂性和性能。本研究在这一背景下，以中国股票市场为研究对象，旨在利用这些先进的深度学习技术，提高对系统性风险的识别和预测能力。
 ## 2.1 数据集描述
@@ -424,4 +425,4 @@ model_dynamic.fit(X_train, y_train, epochs=200, batch_size=256)  # 训练模型�
 在我们的实验中，我们发现堆叠式LSTM+动态残差模型在预测股票价格上的综合表现最好。特别是当迭代次数增加时，它学习的效率比堆叠式LSTM高出很多。这可能是因为这个模型能够同时捕捉到数据中的复杂模式和简单模式，从而进行更准确的预测。然而，这并不意味着这个模型在所有情况下都会表现最好。在不同的任务和数据集上，不同的模型可能会有不同的表现。因此，选择最适合的模型需要根据具体的任务和数据来决定。 
 
 # 结束语
-如果有疑问欢迎大家留言讨论，你如果觉得这篇文章对你有帮助可以给我一个免费的赞吗？我们之间的交流是我最大的动力！
+如果有疑问欢迎大家留言讨论，请求路过的佬们给个⭐️～
